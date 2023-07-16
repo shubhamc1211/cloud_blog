@@ -1,5 +1,8 @@
 const BASE_URL = "http://localhost:6001";
 
+console.log("In APIs:");
+console.log(process.env);
+console.log(process.env.API_PUTDATA);
 const APIs = {
   API_SAVE_BLOGS: process.env.API_PUTDATA,
   API_GET_BLOG: process.env.API_GETDATA,
