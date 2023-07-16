@@ -1,8 +1,0 @@
-export const REACT_APP_API_GETDATA =
-  "https://un1twq2pv9.execute-api.us-east-1.amazonaws.com/prod/";
-export const REACT_APP_API_PUTDATA =
-  "https://uqmj2mvom3.execute-api.us-east-1.amazonaws.com/prod/";
-export const REACT_APP_API_SNS =
-  "https://66hh6oar0f.execute-api.us-east-1.amazonaws.com/prod/";
-export const REACT_APP_API_TEXT =
-  "https://dtwclz2n38.execute-api.us-east-1.amazonaws.com/prod/";
