@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "dotenv";
 
 console.log("In APIs:");
 console.log(process.env);
