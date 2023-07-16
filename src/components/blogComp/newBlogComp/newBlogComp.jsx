@@ -24,7 +24,7 @@ function NewBlogComp({ updateBlogPageType }) {
 
     try {
       // Make a POST request to your backend API endpoint
-      console.log("Request send");
+      console.log("Request send to:", APIs.API_SAVE_BLOGS);
       const response = await axios.post(APIs.API_SAVE_BLOGS, data);
       console.log("Request done");
       console.log(response);
