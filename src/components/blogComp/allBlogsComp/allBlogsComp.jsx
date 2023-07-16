@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import BlogCardComp from "../../blogCardComp/blogCardComp";
 import APIs from "../../../util/APIs";
+import axios from "axios";
 
 function AllBlogsComp() {
   const [blogData, setBlogData] = useState([]);
@@ -9,8 +10,8 @@ function AllBlogsComp() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(APIs.API_GET_BLOGS);
-        const data = await response.json();
+        const response = await axios.get(APIs.API_GET_BLOG);
+        const data = await response.data;
         setBlogData(data);
       } catch (error) {
         console.error("Error fetching blog data:", error);

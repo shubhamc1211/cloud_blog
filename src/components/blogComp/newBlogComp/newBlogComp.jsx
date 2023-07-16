@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Grid, TextField, Button } from "@mui/material";
+import APIs from "../../../util/APIs";
+import axios from "axios";
 
-function NewBlogComp() {
+function NewBlogComp({ updateBlogPageType }) {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [text, setText] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -14,19 +17,18 @@ function NewBlogComp() {
       title,
       author,
       text,
+      email,
     };
+
+    console.log(data);
 
     try {
       // Make a POST request to your backend API endpoint
-      const response = await fetch("https://example.com/api/blogs", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
+      console.log("Request send");
+      const response = await axios.post(APIs.API_SAVE_BLOGS, data);
+      console.log("Request done");
+      console.log(response);
+      if (response) {
         // Blog data saved successfully
         console.log("Blog data saved successfully");
 
@@ -34,9 +36,12 @@ function NewBlogComp() {
         setTitle("");
         setAuthor("");
         setText("");
+        setEmail("");
+
+        updateBlogPageType("view");
       } else {
         // Error saving blog data
-        console.error("Error saving blog data");
+        console.error("Error saving blog data", response.error);
       }
     } catch (error) {
       // Network error or other issues
@@ -65,6 +70,14 @@ function NewBlogComp() {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            label="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
             label="Text"
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -73,6 +86,7 @@ function NewBlogComp() {
             fullWidth
           />
         </Grid>
+
         <Grid item xs={12}>
           <Button variant="contained" color="primary" onClick={handleSubmit}>
             Submit

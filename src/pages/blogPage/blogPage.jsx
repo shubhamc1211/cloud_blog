@@ -21,7 +21,10 @@ function BlogPage() {
           />
         </Grid>
         <Grid item xs={10}>
-          <BlogComp blogPageType={blogPageType} />
+          <BlogComp
+            blogPageType={blogPageType}
+            updateBlogPageType={updateBlogPageType}
+          />
         </Grid>
       </Grid>
     </div>

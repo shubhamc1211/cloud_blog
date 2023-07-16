@@ -1,9 +1,10 @@
 const BASE_URL = "http://localhost:6001";
 
 const APIs = {
-  API_SAVE_BLOGS: `${BASE_URL}/save`,
-  API_GET_BLOG: `${BASE_URL}/get`,
-  API_TRANSLATE: `${BASE_URL}/translate`,
+  API_SAVE_BLOGS: process.env.API_PUTDATA,
+  API_GET_BLOG: process.env.API_GETDATA,
+  API_TRANSLATE: process.env.API_TEXT,
+  API_SNS: API_SNS,
 };
 
 export default APIs;
