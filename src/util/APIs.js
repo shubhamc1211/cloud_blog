@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:6001";
+import "dotenv/config";
 
 console.log("In APIs:");
 console.log(process.env);
@@ -11,4 +11,3 @@ const APIs = {
 };
 
 export default APIs;
-export { BASE_URL };
