@@ -22,10 +22,10 @@ let APIs = {
 
 // APIs = {
 //   API_SAVE_BLOGS:
-//     "https://iyoscf9357.execute-api.us-east-1.amazonaws.com/prod/",
-//   API_GET_BLOG: "https://vk6kvwiau6.execute-api.us-east-1.amazonaws.com/prod/",
-//   API_TRANSLATE: "https://ovfsu4o79i.execute-api.us-east-1.amazonaws.com/prod/",
-//   API_SNS: "https://x4hwea9ef4.execute-api.us-east-1.amazonaws.com/prod/",
+//     "https://a3iuizbpr6.execute-api.us-east-1.amazonaws.com/prod/",
+//   API_GET_BLOG: "https://ft9t7d3z93.execute-api.us-east-1.amazonaws.com/prod/",
+//   API_TRANSLATE: "https://yux4ho6fs9.execute-api.us-east-1.amazonaws.com/prod/",
+//   API_SNS: "https://nd0dsf7364.execute-api.us-east-1.amazonaws.com/prod/",
 // };
 
 export default APIs;

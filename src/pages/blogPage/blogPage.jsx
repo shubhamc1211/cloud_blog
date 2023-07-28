@@ -4,7 +4,7 @@ import SideBarComp from "../../components/sideBarComp/sideBarComp";
 import BlogComp from "../../components/blogComp/blogComp";
 
 function BlogPage() {
-  const [blogPageType, updateBlogPageType] = useState("view");
+  const [blogPageType, updateBlogPageType] = useState("new");
 
   const setUpdatePageType = (pageType) => {
     updateBlogPageType(pageType);
