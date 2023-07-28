@@ -23,7 +23,7 @@ function BlogPage() {
         <Grid item xs={10}>
           <BlogComp
             blogPageType={blogPageType}
-            updateBlogPageType={updateBlogPageType}
+            setUpdatePageType={setUpdatePageType}
           />
         </Grid>
       </Grid>

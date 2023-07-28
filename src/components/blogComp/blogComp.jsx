@@ -3,13 +3,16 @@ import { Grid } from "@mui/material";
 import NewBlogComp from "./newBlogComp/newBlogComp";
 import AllBlogsComp from "./allBlogsComp/allBlogsComp";
 
-function BlogComp({ blogPageType, updateBlogPageType }) {
+function BlogComp({ blogPageType, setUpdatePageType }) {
   return (
     <div className="blogComp">
       {blogPageType == "new" ? (
-        <NewBlogComp updateBlogPageType={updateBlogPageType} />
+        <NewBlogComp setUpdatePageType={setUpdatePageType} />
       ) : (
-        <AllBlogsComp updateBlogPageType={updateBlogPageType} />
+        <AllBlogsComp
+          setUpdatePageType={setUpdatePageType}
+          blogPageType={blogPageType}
+        />
       )}
     </div>
   );

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Card, CardContent, Typography, TextField } from "@mui/material";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import CommentIcon from "@mui/icons-material/Comment";
 
-function BlogCardComp({ title, author, sentiment }) {
+function BlogCardComp({ title, author, likes, comments }) {
   const [comment, setComment] = useState("");
 
   const handleCommentChange = (event) => {
@@ -16,16 +18,10 @@ function BlogCardComp({ title, author, sentiment }) {
         </Typography>
         <Typography variant="subtitle1">{`By ${author}`}</Typography>
         <Typography variant="body2" gutterBottom>
-          Sentiment: {sentiment}
+          {/* <ThumbUpIcon />: {likes} */}
+          <CommentIcon />{" "}
+          <span className="numComments">{comments?.length}</span>
         </Typography>
-        <TextField
-          label="Add Comment"
-          value={comment}
-          onChange={handleCommentChange}
-          multiline
-          rows={2}
-          fullWidth
-        />
       </CardContent>
     </Card>
   );

@@ -1,0 +1,15 @@
+.authorName {
+    text-align: left;
+    font-weight: 600 !important;
+    border-bottom: 1px solid black;
+}
+
+.addCommentClassDiv {
+    margin-top: 2px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.blogText {
+    text-align: left;
+}
